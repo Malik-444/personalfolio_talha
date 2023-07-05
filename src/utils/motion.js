@@ -128,8 +128,28 @@ export const footerVariants = {
     y: 0,
     transition: {
       type: "spring",
-      stiffness: 80,
-      delay: 0.5,
+      stiffness: 1080,
+      delay: 0.7,
+    },
+  },
+};
+export const footerVariants2 = {
+  hidden: {
+    opacity: 0,
+    y: 50,
+    transition: {
+      type: "spring",
+      stiffness: 150,
+      damping: 140,
+    },
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 300,
+      delay: 0.7,
     },
   },
 };
@@ -144,10 +164,9 @@ export const staggerChildren = {
   },
 };
 
-
 export const getMenuStyles = (menuOpened) => {
   if (document.documentElement.clientWidth <= 640) {
-    console.log("outside of sidebar reached")
+    console.log("outside of sidebar reached");
     return { right: !menuOpened && "-100%" };
   }
 };
